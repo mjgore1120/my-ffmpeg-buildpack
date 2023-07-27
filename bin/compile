@@ -1,0 +1,15 @@
+#!/bin/sh
+
+BUILD_DIR=$1
+
+echo "-----> Installing ffmpeg"
+
+# Here, you can either download a precompiled FFmpeg binary or compile it from source.
+# For simplicity, we'll download a precompiled static binary.
+
+FFMPEG_BINARIES="https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-amd64-static.tar.xz"
+
+curl -L $FFMPEG_BINARIES | tar xJ -C $BUILD_DIR
+
+echo "-----> FFmpeg installation done"
+

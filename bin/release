@@ -1,0 +1,6 @@
+#!/bin/sh
+echo "---"
+echo "Config vars:"
+echo "  - None"
+echo "Add-ons:"
+echo "  - None"
