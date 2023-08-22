@@ -10,7 +10,7 @@ echo "-----> BUILD_DIR is: $BUILD_DIR, downloading binaries"
 # Here, you can either download a precompiled FFmpeg binary or compile it from source.
 # For simplicity, we'll download a precompiled static binary.
 
-FFMPEG_BINARIES="https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-amd64-static.tar.xz"
+FFMPEG_BINARIES="https://drive.google.com/uc?export=download&id=1fQOcp4lcXyXmyGSCGWifu-9-32wLsSy6"
 
 echo "download done, executing curl command"
 
