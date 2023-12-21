@@ -7,8 +7,8 @@ BUILD_DIR=$1
 echo "-----> BUILD_DIR is: $BUILD_DIR, downloading binaries"
 
 # Download each part of the FFmpeg binary
-curl -L -o "$BUILD_DIR/ffmpeg-split-aa" [URL to ffmpeg-split-aa]
-curl -L -o "$BUILD_DIR/ffmpeg-split-ab" [URL to ffmpeg-split-ab]
+curl -L -o "$BUILD_DIR/ffmpeg-split-aa" "https://github.com/mjgore1120/my-ffmpeg-buildpack/blob/main/ffmpeg-split-aa"
+curl -L -o "$BUILD_DIR/ffmpeg-split-ab" "https://github.com/mjgore1120/my-ffmpeg-buildpack/blob/main/ffmpeg-split-ab"
 
 # Reassemble the binary
 cat $BUILD_DIR/ffmpeg-split-* > $BUILD_DIR/ffmpeg-release-amd64-static.tar.xz
