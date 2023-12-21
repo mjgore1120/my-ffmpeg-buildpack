@@ -6,15 +6,24 @@ BUILD_DIR=$1
 
 echo "-----> BUILD_DIR is: $BUILD_DIR, downloading binaries"
 
-
-# Here, you can either download a precompiled FFmpeg binary or compile it from source.
-# For simplicity, we'll download a precompiled static binary.
-
+# Download location for the FFmpeg binaries
 FFMPEG_BINARIES="https://drive.google.com/uc?export=download&id=1fQOcp4lcXyXmyGSCGWifu-9-32wLsSy6"
+FFMPEG_TAR="ffmpeg.tar.xz"
 
-echo "download done, executing curl command"
+# Downloading the FFmpeg binary
+curl -L $FFMPEG_BINARIES -o $FFMPEG_TAR
 
-curl -L $FFMPEG_BINARIES | tar xJ -C $BUILD_DIR
+echo "Download completed. Details of the downloaded file:"
+# Log file size
+echo "File size:"
+ls -lh $FFMPEG_TAR
+
+# Log checksum
+echo "SHA256 checksum:"
+sha256sum $FFMPEG_TAR
+
+# Extract the downloaded file
+echo "Extracting FFmpeg binaries"
+tar xJf $FFMPEG_TAR -C $BUILD_DIR
 
 echo "-----> FFmpeg installation done"
-
